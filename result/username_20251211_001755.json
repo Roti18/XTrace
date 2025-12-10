@@ -1,0 +1,33 @@
+{
+    "session_id": "20251211_001735",
+    "timestamp": "2025-12-11T00:17:55.534779",
+    "mode": "username",
+    "target": "moch zamroni",
+    "data": {
+        "target": "moch zamroni",
+        "found": [],
+        "total_found": 0,
+        "total_checked": 57,
+        "not_found_count": 57,
+        "errors": [],
+        "google_dorks": [
+            "\"moch zamroni\"",
+            "\"moch zamroni\" site:twitter.com OR site:instagram.com OR site:facebook.com",
+            "\"moch zamroni\" site:linkedin.com",
+            "\"moch zamroni\" site:github.com OR site:gitlab.com",
+            "\"moch zamroni\" filetype:pdf",
+            "intext:\"moch zamroni\" site:pastebin.com",
+            "\"moch zamroni\" inurl:profile",
+            "\"moch zamroni\" inurl:user",
+            "\"moch zamroni\" site:reddit.com",
+            "\"moch zamroni\" (contact OR email OR phone)"
+        ],
+        "scan_duration": "0.04s",
+        "timestamp": "2025-12-11T00:17:55.534754"
+    },
+    "metadata": {
+        "tool": "XTrace v3.0",
+        "user_location": "Surabaya, Indonesia",
+        "scan_duration": "0.04s"
+    }
+}
