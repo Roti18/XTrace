@@ -7,13 +7,14 @@ venv/
 env/
 ENV/
 
-reports/*
-results/*
-logs/*.log
-images/*.jpg
-images/*.png
-images/*.jpeg
+reports/
+results/
+logs/
+images/*.{jpg,png,jpeg}
 !images/.gitkeep
+
+__pycache__/
+*.pyc
 
 config/api_keys.json
 
