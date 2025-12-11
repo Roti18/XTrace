@@ -64,58 +64,35 @@ Tool ini HANYA untuk penggunaan **LEGAL** dan **ETIS**:
 - File hash generation
 - Camera info detection
 
-## Instalasi
-
-### Windows
-
-```bash
-# Clone repository
-git clone https://github.com/Roti18/XTrace.git
-cd XTrace
-
-# Jalankan installer
-install.bat
-```
-
-### Linux/maxOS
-
-```bash
-# Clone repository
-git clone https://github.com/Roti18/XTrace.git
-cd XTrace
-
-# Berikan permission dan jalankan installer
-chmod +x install.sh
-./install.sh
-```
-
 ## Cara Penggunaan
 
+Clone repository ini dan jalankan script `xtrace.py` dengan Python.
+
 ```bash
-xtrace
+# Clone repository
+git clone https://github.com/Roti18/XTrace.git
+cd XTrace
+
+# Jalankan script
+python xtrace.py
 ```
+
+Script akan secara otomatis memeriksa dan menawarkan untuk menginstal dependensi yang diperlukan saat pertama kali dijalankan.
 
 ### Contoh Penggunaan:
 
-**1. Username Search:**
+**1. Username Search (Mode Interaktif):**
 
 ```
+python xtrace.py
 [?] Pilih opsi: 1
 [?] Masukkan username: johndoe
 ```
 
-**2. Photo Analysis:**
+**2. Photo Analysis (Mode Argumen):**
 
 ```
-[?] Pilih opsi: 7
-[?] Masukkan path foto: ./images/photo.jpg
-```
-
-**3. Export Results:**
-
-```
-[?] Pilih opsi: 10
-[?] Nama file: hasil_investigasi.json
+python xtrace.py -ph ./images/photo.jpg
 ```
 
 ## Photo OSINT - Panduan Lengkap
@@ -183,8 +160,8 @@ xtrace
 ## Struktur Project
 
 ```
-osint-tool/
-├── osint_tool.py          # Script utama
+XTrace/
+├── xtrace.py              # Script utama
 ├── images/                # Simpan foto disini
 ├── results/               # Output JSON
 └── requirements.txt       # Dependencies
