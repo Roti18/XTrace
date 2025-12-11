@@ -6,18 +6,28 @@ from datetime import datetime
 import time
 import subprocess
 
+import importlib.metadata
+from packaging.version import parse as parse_version
+
 def check_and_install_dependencies():
     """Checks for required packages and prompts the user to install them if they are missing."""
     try:
-        import pkg_resources
-        requirements = ["beautifulsoup4>=4.12.0", "dnspython>=2.4.0", "Pillow>=10.0.0"]
+        # Define requirements with package name and version specifier
+        requirements = {
+            "beautifulsoup4": ">=4.12.0",
+            "dnspython": ">=2.4.0",
+            "Pillow": ">=10.0.0"
+        }
         missing_packages = []
-        for requirement in requirements:
+
+        for package, version_spec in requirements.items():
             try:
-                pkg_resources.require(requirement)
-            except (pkg_resources.DistributionNotFound, pkg_resources.VersionConflict):
-                missing_packages.append(requirement)
-        
+                installed_version = importlib.metadata.version(package)
+                if parse_version(installed_version) < parse_version(version_spec.strip(">=")):
+                    missing_packages.append(f"{package}{version_spec}")
+            except importlib.metadata.PackageNotFoundError:
+                missing_packages.append(f"{package}{version_spec}")
+
         if missing_packages:
             print(f"{Colors.YELLOW}[!] The following required packages are missing or out of date:{Colors.END}")
             for pkg in missing_packages:
@@ -27,16 +37,20 @@ def check_and_install_dependencies():
             if response == 'y':
                 print(f"{Colors.CYAN}[*] Installing dependencies...{Colors.END}")
                 try:
-                    subprocess.check_call([sys.executable, "-m", "pip", "install", *missing_packages])
+                    # We install the packages without the version specifier for simplicity,
+                    # letting pip resolve the latest compatible version.
+                    # For more complex scenarios, parsing the full specifier would be needed.
+                    package_names = [pkg.split('>=')[0] for pkg in missing_packages]
+                    subprocess.check_call([sys.executable, "-m", "pip", "install", *package_names])
                     print(f"{Colors.GREEN}[✓] Dependencies installed successfully.{Colors.END}")
                     # Re-check to be sure
-                    for requirement in requirements:
-                         pkg_resources.require(requirement)
+                    for package, version_spec in requirements.items():
+                        importlib.metadata.version(package) # This will raise PackageNotFoundError if not installed
                 except subprocess.CalledProcessError as e:
                     print(f"{Colors.RED}[!] Error installing dependencies: {e}{Colors.END}")
                     sys.exit(1)
-                except (pkg_resources.DistributionNotFound, pkg_resources.VersionConflict) as e:
-                    print(f"{Colors.RED}[!] A dependency issue persists even after installation: {e}{Colors.END}")
+                except importlib.metadata.PackageNotFoundError as e:
+                    print(f"{Colors.RED}[!] A dependency issue persists even after installation: {e.name}{Colors.END}")
                     print(f"{Colors.RED}[!] Please try to resolve this manually.{Colors.END}")
                     sys.exit(1)
             else:
@@ -44,28 +58,16 @@ def check_and_install_dependencies():
                 sys.exit(1)
 
     except ImportError:
-        print(f"{Colors.RED}[!] `pkg_resources` (from `setuptools`) not found.{Colors.END}")
-        print(f"{Colors.YELLOW}Please install it using: 'pip install setuptools'{Colors.END}")
+        # This error is kept in case 'packaging' itself is not available, though it's a common dependency.
+        print(f"{Colors.RED}[!] `importlib.metadata` or `packaging` not available in this Python version.{Colors.END}")
+        print(f"{Colors.YELLOW}Please upgrade your Python environment or manually install dependencies from requirements.txt.{Colors.END}")
         sys.exit(1)
 
 
-try:
-    from PIL import Image
-    PILLOW_AVAILABLE = True
-except ImportError:
-    PILLOW_AVAILABLE = False
-
-try:
-    import dns.resolver
-    DNS_AVAILABLE = True
-except ImportError:
-    DNS_AVAILABLE = False
-
-try:
-    from bs4 import BeautifulSoup
-    BS4_AVAILABLE = True
-except ImportError:
-    BS4_AVAILABLE = False
+# These imports are now guaranteed by the dependency checker.
+from PIL import Image
+import dns.resolver
+from bs4 import BeautifulSoup
 
 from modules.colors import Colors
 from modules.username import check_username
@@ -116,7 +118,7 @@ class XTraceOSINT:
             print(f"╚════════════════════════════════════════════════════════════════╝{Colors.END}")
             print(f"{'='*70}{Colors.END}\n")
             
-            print(f"{Colors.GREEN}  [1]{Colors.END} Username OSINT        - Search 100+ platforms")
+            print(f"{Colors.GREEN}  [1]{Colors.END} Username OSINT        - Search 50+ platforms")
             print(f"{Colors.GREEN}  [2]{Colors.END} Email OSINT           - Email analysis & validation")
             print(f"{Colors.GREEN}  [3]{Colors.END} Domain OSINT          - Domain & DNS analysis")
             print(f"{Colors.GREEN}  [4]{Colors.END} Phone OSINT           - Phone number lookup")
@@ -243,7 +245,7 @@ def print_help():
   xtrace [options]
 
 {Colors.BOLD}OPTIONS:{Colors.END}
-  {Colors.GREEN}-u, --username <username>{Colors.END}    Search username across 100+ platforms
+  {Colors.GREEN}-u, --username <username>{Colors.END}    Search username across 50+ platforms
   {Colors.GREEN}-e, --email <email>{Colors.END}          Email validation and OSINT
   {Colors.GREEN}-d, --domain <domain>{Colors.END}        Domain analysis and DNS lookup
   {Colors.GREEN}-p, --phone <phone>{Colors.END}          Phone number lookup and analysis
@@ -260,7 +262,7 @@ def print_help():
   {Colors.CYAN}xtrace -ph image.jpg{Colors.END}
 
 {Colors.BOLD}FEATURES:{Colors.END}
-  • Username search across 100+ social media & platforms
+  • Username search across 50+ social media & platforms
   • Email validation, breach check, and provider detection
   • Domain DNS analysis, subdomain discovery, SSL check
   • Phone number validation and provider lookup (ID support)
