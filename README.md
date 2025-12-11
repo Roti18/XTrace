@@ -73,8 +73,11 @@ Clone repository ini dan jalankan script `xtrace.py` dengan Python.
 git clone https://github.com/Roti18/XTrace.git
 cd XTrace
 
-# Jalankan script
+# Jalankan script di Windows
 python xtrace.py
+
+# Jalankan script di Linux/macOS
+python3 xtrace.py
 ```
 
 Script akan secara otomatis memeriksa dan menawarkan untuk menginstal dependensi yang diperlukan saat pertama kali dijalankan.
