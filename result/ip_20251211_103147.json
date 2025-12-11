@@ -1,0 +1,55 @@
+{
+    "session_id": "20251211_102608",
+    "timestamp": "2025-12-11T10:31:47.853626",
+    "mode": "ip",
+    "target": "192.168.1.8",
+    "data": {
+        "target": "192.168.1.8",
+        "ip": "192.168.1.8",
+        "type": "Private (Class C)",
+        "reverse_dns": null,
+        "open_ports": [
+            {
+                "port": 80,
+                "service": "HTTP",
+                "state": "open"
+            }
+        ],
+        "services": [],
+        "intelligence_resources": [
+            {
+                "name": "IPInfo",
+                "url": "https://ipinfo.io/192.168.1.8"
+            },
+            {
+                "name": "AbuseIPDB",
+                "url": "https://www.abuseipdb.com/check/192.168.1.8"
+            },
+            {
+                "name": "VirusTotal",
+                "url": "https://www.virustotal.com/gui/ip-address/192.168.1.8"
+            },
+            {
+                "name": "Shodan",
+                "url": "https://www.shodan.io/host/192.168.1.8"
+            },
+            {
+                "name": "Censys",
+                "url": "https://search.censys.io/hosts/192.168.1.8"
+            },
+            {
+                "name": "IPVoid",
+                "url": "https://www.ipvoid.com/ip-blacklist-check/"
+            },
+            {
+                "name": "WHOIS",
+                "url": "https://www.whois.com/whois/192.168.1.8"
+            }
+        ]
+    },
+    "metadata": {
+        "tool": "XTrace v3.0",
+        "user_location": "Surabaya, Indonesia",
+        "scan_duration": "unknown"
+    }
+}

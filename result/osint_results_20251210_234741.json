@@ -1,0 +1,79 @@
+{
+    "username": {
+        "query": "muti",
+        "found": [
+            {
+                "platform": "GitHub",
+                "url": "https://github.com/muti",
+                "status": "FOUND ✓"
+            },
+            {
+                "platform": "Reddit",
+                "url": "https://www.reddit.com/user/muti",
+                "status": "FOUND ✓"
+            },
+            {
+                "platform": "Pinterest",
+                "url": "https://www.pinterest.com/muti",
+                "status": "FOUND ✓"
+            },
+            {
+                "platform": "Twitch",
+                "url": "https://www.twitch.tv/muti",
+                "status": "FOUND ✓"
+            },
+            {
+                "platform": "DeviantArt",
+                "url": "https://www.deviantart.com/muti",
+                "status": "FOUND ✓"
+            },
+            {
+                "platform": "Behance",
+                "url": "https://www.behance.net/muti",
+                "status": "FOUND ✓"
+            },
+            {
+                "platform": "Patreon",
+                "url": "https://www.patreon.com/muti",
+                "status": "FOUND ✓"
+            },
+            {
+                "platform": "GitLab",
+                "url": "https://gitlab.com/muti",
+                "status": "FOUND ✓"
+            },
+            {
+                "platform": "Spotify",
+                "url": "https://open.spotify.com/user/muti",
+                "status": "FOUND ✓"
+            },
+            {
+                "platform": "SoundCloud",
+                "url": "https://soundcloud.com/muti",
+                "status": "FOUND ✓"
+            },
+            {
+                "platform": "About.me",
+                "url": "https://about.me/muti",
+                "status": "FOUND ✓"
+            },
+            {
+                "platform": "Linktree",
+                "url": "https://linktr.ee/muti",
+                "status": "FOUND ✓"
+            },
+            {
+                "platform": "HackerNews",
+                "url": "https://news.ycombinator.com/user?id=muti",
+                "status": "FOUND ✓"
+            }
+        ],
+        "total_found": 13,
+        "google_dorks": [
+            "\"muti\" site:twitter.com OR site:instagram.com OR site:facebook.com",
+            "\"muti\" site:linkedin.com OR site:github.com",
+            "\"muti\" filetype:pdf OR filetype:doc",
+            "intext:\"muti\" site:pastebin.com"
+        ]
+    }
+}

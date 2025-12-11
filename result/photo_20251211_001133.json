@@ -1,0 +1,24 @@
+{
+    "session_id": "20251211_001035",
+    "timestamp": "2025-12-11T00:11:33.611803",
+    "mode": "photo",
+    "target": "./WIN_20251210_21_26_57_Pro.jpg",
+    "data": {
+        "target": "./WIN_20251210_21_26_57_Pro.jpg",
+        "file_info": {
+            "filename": "WIN_20251210_21_26_57_Pro.jpg",
+            "size_bytes": 115754,
+            "size_kb": 113.04,
+            "dimensions": "1280x720",
+            "format": "JPEG",
+            "mode": "RGB"
+        },
+        "exif_data": {
+            "Software": "Windows 11",
+            "59932": "\u001c\u0000\u0000\u0000\u0010\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+            "ExifOffset": "4182",
+            "SubsecTimeOriginal": "592",
+            "DateTimeOriginal": "2025:12:10 21:26:57"
+        },
+        "gps_data": {
+            "59932": 

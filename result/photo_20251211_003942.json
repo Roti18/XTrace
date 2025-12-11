@@ -1,0 +1,36 @@
+{
+    "session_id": "20251211_003927",
+    "timestamp": "2025-12-11T00:39:42.210359",
+    "mode": "photo",
+    "target": "WIN_20251210_21_26_57_Pro.jpg",
+    "data": {
+        "target": "WIN_20251210_21_26_57_Pro.jpg",
+        "file_info": {
+            "filename": "WIN_20251210_21_26_57_Pro.jpg",
+            "size_bytes": 115754,
+            "size_kb": 113.04,
+            "dimensions": "1280x720",
+            "format": "JPEG",
+            "mode": "RGB"
+        },
+        "exif_data": {
+            "Software": "Windows 11",
+            "59932": "\u0010",
+            "ExifOffset": "4182",
+            "SubsecTimeOriginal": "592",
+            "DateTimeOriginal": "2025:12:10 21:26:57"
+        },
+        "gps_data": {
+            "59932": "\u0010"
+        },
+        "hashes": {
+            "md5": "eac9154108f48863759d53722e43a691",
+            "sha256": "8e176c433946dbe0c34157173088c4f90564f77d6bd423f2f793d645db0f1250"
+        }
+    },
+    "metadata": {
+        "tool": "XTrace v3.0",
+        "user_location": "Surabaya, Indonesia",
+        "scan_duration": "unknown"
+    }
+}

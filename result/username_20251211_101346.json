@@ -1,0 +1,134 @@
+{
+    "session_id": "20251211_101219",
+    "timestamp": "2025-12-11T10:13:46.374798",
+    "mode": "username",
+    "target": "mootiesh",
+    "data": {
+        "target": "mootiesh",
+        "found": [
+            {
+                "platform": "Bandcamp",
+                "url": "https://mootiesh.bandcamp.com",
+                "status_code": 200
+            },
+            {
+                "platform": "Dailymotion",
+                "url": "https://www.dailymotion.com/mootiesh",
+                "status_code": 200
+            },
+            {
+                "platform": "HackerNews",
+                "url": "https://news.ycombinator.com/user?id=mootiesh",
+                "status_code": 200
+            },
+            {
+                "platform": "HackerRank",
+                "url": "https://www.hackerrank.com/mootiesh",
+                "status_code": 200
+            },
+            {
+                "platform": "Instagram",
+                "url": "https://www.instagram.com/mootiesh",
+                "status_code": 200
+            },
+            {
+                "platform": "Lazada",
+                "url": "https://www.lazada.co.id/shop/mootiesh",
+                "status_code": 200
+            },
+            {
+                "platform": "Meetup",
+                "url": "https://www.meetup.com/members/mootiesh",
+                "status_code": 200
+            },
+            {
+                "platform": "Mixcloud",
+                "url": "https://www.mixcloud.com/mootiesh",
+                "status_code": 200
+            },
+            {
+                "platform": "Pinterest",
+                "url": "https://www.pinterest.com/mootiesh",
+                "status_code": 200
+            },
+            {
+                "platform": "Reddit",
+                "url": "https://www.reddit.com/user/mootiesh",
+                "status_code": 200
+            },
+            {
+                "platform": "Roblox",
+                "url": "https://www.roblox.com/users/profile?username=mootiesh",
+                "status_code": 200
+            },
+            {
+                "platform": "Shopee",
+                "url": "https://shopee.co.id/mootiesh",
+                "status_code": 200
+            },
+            {
+                "platform": "SlideShare",
+                "url": "https://www.slideshare.net/mootiesh",
+                "status_code": 200
+            },
+            {
+                "platform": "Spotify",
+                "url": "https://open.spotify.com/user/mootiesh",
+                "status_code": 200
+            },
+            {
+                "platform": "Steam",
+                "url": "https://steamcommunity.com/id/mootiesh",
+                "status_code": 200
+            },
+            {
+                "platform": "TikTok",
+                "url": "https://www.tiktok.com/@mootiesh",
+                "status_code": 200
+            },
+            {
+                "platform": "Twitch",
+                "url": "https://www.twitch.tv/mootiesh",
+                "status_code": 200
+            },
+            {
+                "platform": "Twitter/X",
+                "url": "https://twitter.com/mootiesh",
+                "status_code": 200
+            },
+            {
+                "platform": "Vimeo",
+                "url": "https://vimeo.com/mootiesh",
+                "status_code": 200
+            },
+            {
+                "platform": "Xbox",
+                "url": "https://account.xbox.com/en-us/profile?gamertag=mootiesh",
+                "status_code": 200
+            }
+        ],
+        "total_found": 20,
+        "total_checked": 57,
+        "not_found_count": 37,
+        "errors": [],
+        "google_dorks": [
+            "\"mootiesh\"",
+            "\"mootiesh\" site:twitter.com OR site:instagram.com OR site:facebook.com",
+            "\"mootiesh\" site:linkedin.com",
+            "\"mootiesh\" site:github.com OR site:gitlab.com",
+            "\"mootiesh\" filetype:pdf",
+            "intext:\"mootiesh\" site:pastebin.com",
+            "\"mootiesh\" inurl:profile",
+            "\"mootiesh\" inurl:user",
+            "\"mootiesh\" site:reddit.com",
+            "\"mootiesh\" (contact OR email OR phone)"
+        ],
+        "scan_duration": "11.04s",
+        "timestamp": "2025-12-11T10:13:46.374748"
+    },
+    "metadata": {
+        "tool": "XTrace v3.0",
+        "user_location": "Surabaya, Indonesia",
+        "scan_duration": "11.04s"
+    }
+}
