@@ -66,22 +66,33 @@ Tool ini HANYA untuk penggunaan **LEGAL** dan **ETIS**:
 
 ## Instalasi
 
+### Windows
+
 ```bash
 # Clone repository
-git clone https://github.com/username/osint-tool.git
-cd osint-tool
+git clone https://github.com/Roti18/XTrace.git
+cd XTrace
 
-# Install dependencies
-pip install -r requirements.txt
+# Jalankan installer
+install.bat
+```
 
-# Atau tanpa dependencies (fitur terbatas):
-python3 osint_tool.py
+### Linux/maxOS
+
+```bash
+# Clone repository
+git clone https://github.com/Roti18/XTrace.git
+cd XTrace
+
+# Berikan permission dan jalankan installer
+chmod +x install.sh
+./install.sh
 ```
 
 ## Cara Penggunaan
 
 ```bash
-python3 osint_tool.py
+xtrace
 ```
 
 ### Contoh Penggunaan:
